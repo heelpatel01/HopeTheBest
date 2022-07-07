@@ -1,0 +1,118 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+	font-family: impact;
+}
+html {
+	scroll-behavior: smooth;
+}
+#leftMenu {
+	height: 100%;
+	width: 0;
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	background-color: deepskyblue;
+	overflow-x: hidden;
+	transition: 0.5s;
+	padding-top: 60px;
+	z-index: 1000;
+}
+.mainNav {
+	margin-top: 70px;
+}
+.mainNav a {
+	margin-bottom: 15px;
+}
+.content, .about, .portfolio, .services, .blog, .contact {
+	display: grid;
+	place-items: center;
+	height: 100vh;
+}
+.content h2, .about h2, .portfolio h2, .services h2, .blog h2, .contact h2 {
+	font-family: russo one;
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 50px;
+	color: deepskyblue;
+}
+.content p, .about p, .portfolio p, .services p, .blog p, .contact p {
+	font-family: montserrat;
+	width: 65%;
+	line-height: 1.9;
+	text-align: center;
+	margin: auto;
+}
+.content {
+	display: grid;
+	place-items: center;
+	height: 100vh;
+	background: url(img/1.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	position: relative;
+	z-index: 1;
+}
+.content:before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background: rgba(0, 0, 0, 0.8);
+	z-index: -1;
+}
+.content p {
+	color: #fff;
+}
+#leftMenu a {
+	padding: 8px 8px 8px 10px;
+	text-decoration: none;
+	font-size: 25px;
+	color: #fff;
+	display: block;
+	transition: 0.4s;
+	text-align: center;
+	text-transform: uppercase;
+	border-radius: 0 50PX 50px 0;
+}
+#leftMenu a:hover {
+	color: #000;
+	background: #FFF;
+}
+#leftMenu a.btn-area {
+	border-radius: 0;
+}
+#leftMenu .btn-area {
+	position: absolute;
+	top: 0;
+	right: 15px;
+	font-size: 40px;
+}
+span {
+	position: fixed;
+	right: 90px;
+	top: 30px;
+	font-size: 30px;
+	transition: 0.3s;
+	cursor: pointer;
+	z-index: 5;
+	color: deepskyblue;
+}
+@media (max-width:767px) {
+	span {
+		right: 15px;
+		top: 20px;
+		font-size: 20px;
+	}
+	.content h2, .about h2, .portfolio h2, .services h2, .blog h2, .contact h2 {
+		font-size: 35px;
+	}
+	.mainNav {
+		margin-top: 20px;
+	}
+}
